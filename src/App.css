@@ -19,7 +19,7 @@ body {
   }
   
   /* 小さな画面サイズの場合は、ナビバーを非表示にし、ハンバーガーメニューを表示 */
-  @media (max-width: 768px) {
+  @media (max-width: 999px) {
     .navbar {
       display: none;
     }

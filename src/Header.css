@@ -1,4 +1,8 @@
 
+/*--------------for desktop--------------*/
+@media (min-width: 1000px) {
+    
+
 .title {
     font-size: 64px;
     color: rgb(255, 254, 252);
@@ -24,4 +28,37 @@
 
 .hamburger-menu {
     margin-left: auto;
+}
+
+}
+
+/*--------------for mobile--------------*/
+@media (max-width: 999px) {
+
+    .title {
+        font-size: 30px;
+        color: rgb(255, 254, 252);
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+        padding-left: 10%; 
+    }
+    
+    
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #5f5f5f;
+      }
+      
+    
+    .hamburger-menu {
+        margin-left: auto;
+    }
 }
