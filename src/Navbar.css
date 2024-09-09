@@ -1,0 +1,13 @@
+.navbar ul{
+    display: flex;
+    gap: 1rem;
+    padding-right: 100px;
+}
+  
+.navbar ul li{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding-right: 10px;
+  }

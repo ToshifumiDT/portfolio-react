@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+
+
+
+  /* デフォルトではナビバーを表示し、ハンバーガーメニューを非表示 */
+.navbar {
+    display: block;
+  }
+  
+  .hamburger-menu {
+    display: none;
+  }
+  
+  /* 小さな画面サイズの場合は、ナビバーを非表示にし、ハンバーガーメニューを表示 */
+  @media (max-width: 768px) {
+    .navbar {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  }
