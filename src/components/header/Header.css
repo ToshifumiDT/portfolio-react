@@ -1,64 +1,85 @@
-
 /*--------------for desktop--------------*/
 @media (min-width: 1000px) {
-    
 
-.title {
-    font-size: 64px;
-    color: rgb(255, 254, 252);
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    padding-left: 10%; 
-}
-
-
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #5f5f5f;
+    .header {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 1rem;
+      background-color: #5f5f5f;
+    }
+  
+    .logo-container {
+      display: flex;
+      align-items: center;
+      order: 1; 
+    }
+  
+    .title {
+      font-size: 64px;
+      color: rgb(255, 254, 252);
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+      margin-left: 20px;
+    }
+  
+    .navbar {
+      display: flex;
+      margin-left: auto; 
+      order: 2; 
+    }
+  
+    .hamburger-menu {
+      display: none;
+    }
+  
+   
+    .logo {
+      width: 150px; 
+      height: auto;
+    }
   }
   
-
-.hamburger-menu {
-    margin-left: auto;
-}
-
-}
-
-/*--------------for mobile--------------*/
-@media (max-width: 999px) {
-
-    .title {
-        font-size: 30px;
-        color: rgb(255, 254, 252);
-        font-family: "Pacifico", cursive;
-        font-weight: 400;
-        font-style: normal;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; 
-        padding-left: 10%; 
-    }
-    
-    
-    
+  /*--------------for mobile--------------*/
+  @media (max-width: 999px) {
+  
     .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: #5f5f5f;
-      }
-      
-    
-    .hamburger-menu {
-        margin-left: auto;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 1rem;
+      background-color: #5f5f5f;
     }
-}
+  
+    .logo-container {
+      display: flex; 
+      align-items: center;
+      order: 1; 
+    }
+  
+    .title {
+      font-size: 30px;
+      color: rgb(255, 254, 252);
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+      margin-left: 10px;
+    }
+  
+    .hamburger-menu {
+      display: flex; 
+      margin-left: auto;
+      order: 2; 
+    }
+  
+    .navbar {
+      display: none;
+    }
+  
+    .logo {
+      width: 100px; 
+      height: auto;
+    }
+  }
+  

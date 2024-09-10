@@ -1,13 +1,45 @@
-.navbar ul{
+
+.navbar {
     display: flex;
-    gap: 1rem;
-    padding-right: 100px;
-}
+    justify-content: flex-end; 
+    padding: 1rem;
+  }
   
-.navbar ul li{
-    list-style: none;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+
+  .navbar ul {
+    display: flex;
+    gap: 1rem; 
+    padding-right: 100px; 
+  }
+  
+
+  .navbar ul li {
+    list-style: none; 
     font-size: 30px;
     padding-right: 10px;
   }
+  
+
+  .navbar ul li a {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+  }
+  
+
+  .navbar ul li a:hover {
+    color: lightgray; 
+  }
+  
+ 
+  .navbar ul li a:visited {
+    color: white;
+  }
+  
+ 
+  @media (max-width: 999px) {
+    .navbar ul {
+      display: none; 
+    }
+  }
+  
