@@ -1,5 +1,6 @@
+
 import React from 'react';
-import NavBar from './NavBar';
+import Navbar from './Navbar';
 import HamburgerMenu from './HamburgerMenu';
 import "./Header.css";
 
@@ -12,11 +13,10 @@ function Header() {
       </div>
       
 
-      <NavBar />
+      <Navbar />
       <HamburgerMenu />
     </header>
   );
 }
-
 
 export default Header;
