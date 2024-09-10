@@ -16,6 +16,7 @@ export function HamburgerProvider({ children }) {
   );
 }
 
+
 export function useHamburger() {
   return useContext(HamburgerContext);
 }
