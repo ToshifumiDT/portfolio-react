@@ -1,24 +1,78 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { InputField } from './InputField';
 
 export default function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);  
+
+       
+        try {
+            const response = await fetch('/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form),  
+            });
+
+            if (response.ok) {
+                alert('Email sent successfully');
+            } else {
+                alert('Failed to send email');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('An error occurred');
+        }
+
+        setIsSubmitting(false);  
+    };
+
     return (
-        <div className="contactform">
-            <h2>Contact Us</h2>
-            <form onSubmit="">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full p-2 text-white bg-slate-500 hover:bg-red-500">
-              {isSubmitting ? "Sending..." : "Send Message"}
+        <form onSubmit={handleSubmit}>
+            <InputField
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={form.name}
+                onChange={handleChange}
+            />
+            <InputField
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={handleChange}
+            />
+            <InputField
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={form.subject}
+                onChange={handleChange}
+            />
+            <InputField
+                type="textarea"
+                name="message"
+                placeholder="Message"
+                value={form.message}
+                onChange={handleChange}
+            />
+            <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
             </button>
-      </form>
-        </div>
-      );
-
-
-
-
-
-
+        </form>
+    );
 }
