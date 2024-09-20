@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { InputField } from './InputField';
+import './ContactForm.css';  
 
 export default function ContactForm() {
 
@@ -10,16 +11,17 @@ export default function ContactForm() {
         message: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);  
 
-       
         try {
-            const response = await fetch('/send', {
+            const response = await fetch('http://localhost:5000/send', {  // 5000
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,38 +43,42 @@ export default function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <InputField
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={form.name}
-                onChange={handleChange}
-            />
-            <InputField
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={form.email}
-                onChange={handleChange}
-            />
-            <InputField
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={form.subject}
-                onChange={handleChange}
-            />
-            <InputField
-                type="textarea"
-                name="message"
-                placeholder="Message"
-                value={form.message}
-                onChange={handleChange}
-            />
-            <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
-            </button>
-        </form>
+        <div className="contact-form-container"> 
+            
+            <form className="contact-form" onSubmit={handleSubmit}> 
+            <h2 className="form-title">Contact Me</h2>
+                <InputField
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={form.name}
+                    onChange={handleChange}
+                />
+                <InputField
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={form.email}
+                    onChange={handleChange}
+                />
+                <InputField
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                />
+                <InputField
+                    type="textarea"
+                    name="message"
+                    placeholder="Message"
+                    value={form.message}
+                    onChange={handleChange}
+                />
+                <button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
+            </form>
+        </div>
     );
 }

@@ -1,8 +1,8 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const dotenv = require('dotenv');
+import express from 'express'; 
+import nodemailer from 'nodemailer';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
 dotenv.config();
 const app = express();
@@ -19,7 +19,6 @@ const transporter = nodemailer.createTransport({
 
 app.post('/send', (req, res) => {
     const { email, subject, message } = req.body;
-
 
     if (!email || !subject || !message) {
         return res.status(400).send('All fields are required');
@@ -41,7 +40,7 @@ app.post('/send', (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
