@@ -23,5 +23,25 @@
         "name": "CSS",
         "icon": "/icons8-css-100.png",
         "tooltip": "Cascading Style Sheets"
+    },
+    {
+        "name": "Wordpress",
+        "icon": "/wordpress.png",
+        "tooltip": "Wordpress"
+    },
+    {
+        "name": "After effects",
+        "icon": "/adobe-after-effects.png",
+        "tooltip": "Adobe After effects"
+    },
+    {
+        "name": "Premiere pro",
+        "icon": "/adobe-premiere-pro.png",
+        "tooltip": "Adobe Premiere pro"
+    },
+    {
+        "name": "Photoshop",
+        "icon": "/adobe-photoshop.png",
+        "tooltip": "Adobe Photoshop"
     }
 ]

@@ -9,7 +9,7 @@ body {
 
 
 
-  /* デフォルトではナビバーを表示し、ハンバーガーメニューを非表示 */
+
 .navbar {
     display: block;
   }
@@ -18,7 +18,6 @@ body {
     display: none;
   }
   
-  /* 小さな画面サイズの場合は、ナビバーを非表示にし、ハンバーガーメニューを表示 */
   @media (max-width: 999px) {
     .navbar {
       display: none;
