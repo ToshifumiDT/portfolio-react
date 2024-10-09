@@ -1,0 +1,71 @@
+/* src/components/introduction.css */
+.introduction-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* セクション全体を中央揃え */
+    padding: 20px;
+    gap: 20px;
+    border-radius: 8px;
+    width: 900px; /* 幅を600pxに設定 */
+    height: 800px;
+    margin: 0 auto; /* 画面中央に配置 */
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h3 {
+    font-size: 40px;
+    color: rgb(255, 254, 252);
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.intro-text p {
+    font-size: 30px;
+    color: rgb(255, 254, 252);
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 999px) {
+
+    .introduction-section {
+        flex-direction: column; /* 縦並びに変更 */
+        width: 100%; /* 幅を画面に合わせる */
+    }
+
+    .intro-image {
+        order: -1; /* 画像を上に配置 */
+        margin-top: 50px;
+        margin-bottom: -60px;
+    }
+
+
+    .intro-image img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+}

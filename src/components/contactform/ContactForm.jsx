@@ -43,7 +43,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="contact-form-container"> 
+        <div className="contact-form-container" id='contact'> 
             
             <form className="contact-form" onSubmit={handleSubmit}> 
             <h2 className="form-title">Contact Me</h2>
