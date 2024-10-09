@@ -9,7 +9,7 @@ const SkillSection = () => {
         <div className="skill-section">
             <h2 className="section-title">My Skills</h2>
             <p className="section-description">
-             {/*add text?*/}
+             
             </p>
             <div className="skills-container">
                 {skillsData.map((skill, index) => (
