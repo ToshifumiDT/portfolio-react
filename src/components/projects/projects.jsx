@@ -30,9 +30,15 @@ const Projects = () => {
                 {projectList.map((project, index) => (
                     <div key={index} className="project-item">
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <img src={project.imageUrl} alt={project.title} className="project-image" />
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
+                            <img 
+                                src={project.imageUrl} 
+                                alt={project.title} 
+                                className="project-image" 
+                            />
+                            <div className="project-item-text">
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                            </div>
                         </a>
                     </div>
                 ))}
