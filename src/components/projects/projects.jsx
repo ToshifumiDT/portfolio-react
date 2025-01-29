@@ -4,7 +4,7 @@ import './projects.css';
 const Projects = () => {
     const projectList = [
         { 
-            title: 'Portforio', 
+            title: 'Portfolio', 
             description: 'This is the first portfolio I made.',
             imageUrl: '../image0001.png',
             link: 'https://toshifumidt.github.io/portfolio/'
