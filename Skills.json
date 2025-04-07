@@ -43,5 +43,10 @@
         "name": "Photoshop",
         "icon": "/adobe-photoshop.png",
         "tooltip": "Adobe Photoshop"
+    },
+    {
+        "name": "Blender",
+        "icon": "/icons8-blender-3d-100.png",
+        "tooltip": "3D creation software"
     }
 ]
