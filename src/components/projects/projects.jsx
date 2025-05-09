@@ -21,6 +21,12 @@ const Projects = () => {
             imageUrl: '../image0003.png',
             link: 'https://eldenringapi-r7ik.vercel.app/'
         },
+        { 
+            title: 'Flag Quiz', 
+            description: 'A React-based Flag Quiz web app built with Tailwind CSS that challenges users to identify 30 national flags per game. \nIt features dark mode, real-time correct/incorrect sound effects, and a top-10 high-score leaderboard stored in localStorage.',
+            imageUrl: '../image0004.png',
+            link: 'https://flag-quiz-orcin.vercel.app/'
+        },
     ];
 
     return (

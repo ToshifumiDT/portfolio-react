@@ -84,9 +84,15 @@
     font-family: "Faculty Glyphic", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align: justify;
+    text-align: left;
     margin: 0;
 }
+
+
+.project-item-text p {
+    /* 改行 */
+    white-space: pre-line;
+  }
 
 
 @media (max-width: 999px) {
