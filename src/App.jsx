@@ -19,7 +19,7 @@ function App() {
 
   return (
     <HamburgerProvider>
-      {/* 言語切り替え（国旗アイコン＋レスポンシブ） */}
+      {/* Language */}
       <div className="flex gap-2 items-center justify-center sm:justify-end px-4 py-2 flex-wrap sm:flex-nowrap">
         <button
           onClick={() => handleLanguageChange('en')}
@@ -45,14 +45,14 @@ function App() {
         </button>
       </div>
 
-      {/* 各セクション */}
+      {/* Section */}
       <Header />
       <Introduction />
       <About />
       <SkillSection />
       <Projects />
 
-      {/* GitHubリンク */}
+      {/* GitHub */}
       <div id="Github" className="text-center my-6">
         <a
           href="https://github.com/ToshifumiDT"
