@@ -1,0 +1,40 @@
+{
+  "githubLinkText": "Check github page.",
+  "aboutTitle": "About Me",
+  "aboutText": "Hi! I'm Toshifumi Kamino — a creative individual with both Norwegian and Japanese roots. My journey began in Japan, where I studied violin making and repair at a vocational school, gaining hands-on skills in crafting and restoring violins, violas, and cellos.<br/><br/>After graduating, I moved to Norway and attended a Folkehøyskole to explore my interest in hunting and fishing. Over time, my passion shifted toward digital creativity — especially web design and video editing.<br/><br/>I launched a personal blog using WordPress to share photos and videos, which I edit myself. This sparked a deep interest in IT and digital tools, motivating me to pursue further learning. I started with Cyberlink and later advanced to Adobe Premiere Pro and After Effects, gaining experience in basic editing, color grading, and smooth transitions.<br/><br/>In 2024, I joined a course called Digitale Talenter, where I deepened my knowledge of web development. I began with HTML, CSS, and JavaScript, and progressed to modern frameworks like React and Next.js.<br/><br/>In parallel, I’ve been teaching myself 3D modeling using Blender. From creating simple shapes to building complex character models, this journey continues to inspire my curiosity and creativity.<br/><br/>I'm passionate about combining technology and creativity — and I'm excited to keep building, learning, and sharing my work with the world.",
+  "introGreeting": "Hello!",
+  "introDescription": "I'm Toshifumi and I do Web development and video editing.",
+  "skillsTitle": "My Skills",
+  "skillsDescription": "Here are some of the tools and technologies I use.",
+  "projectsTitle": "My Projects",
+  "projects": {
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "This is the first portfolio I made."
+    },
+    "favoriteFood": {
+      "title": "Favorite Food",
+      "description": "I created a simple page using Next.js to introduce my favorite foods."
+    },
+    "eldenring": {
+      "title": "Eldenring API",
+      "description": "This is a page using the Elden Ring API."
+    },
+    "flagQuiz": {
+      "title": "Flag Quiz",
+      "description": "A React-based Flag Quiz web app built with Tailwind CSS that challenges users to identify 30 national flags per game.\nIt features dark mode, real-time correct/incorrect sound effects, and a top-10 high-score leaderboard stored in localStorage."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Email sent successfully",
+    "fail": "Failed to send email",
+    "error": "An error occurred"
+  }
+}

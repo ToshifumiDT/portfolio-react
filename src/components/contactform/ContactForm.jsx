@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { InputField } from './InputField';
 import './ContactForm.css';  
+import { useTranslation } from 'react-i18next';
 
 export default function ContactForm() {
+    const { t } = useTranslation();
 
     const [form, setForm] = useState({
         name: '',
@@ -18,65 +20,62 @@ export default function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSubmitting(true);  
+        setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://localhost:5000/send', {  // 5000
+            const response = await fetch('http://localhost:5000/send', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(form),  
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form),
             });
 
             if (response.ok) {
-                alert('Email sent successfully');
+                alert(t('contact.success'));
             } else {
-                alert('Failed to send email');
+                alert(t('contact.fail'));
             }
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('An error occurred');
+            alert(t('contact.error'));
         }
 
-        setIsSubmitting(false);  
+        setIsSubmitting(false);
     };
 
     return (
-        <div className="contact-form-container" id='contact'> 
-            
-            <form className="contact-form" onSubmit={handleSubmit}> 
-            <h2 className="form-title">Contact Me</h2>
+        <div className="contact-form-container" id="contact">
+            <form className="contact-form" onSubmit={handleSubmit}>
+                <h2 className="form-title">{t('contact.title')}</h2>
                 <InputField
                     type="text"
                     name="name"
-                    placeholder="Name"
+                    placeholder={t('contact.name')}
                     value={form.name}
                     onChange={handleChange}
                 />
                 <InputField
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder={t('contact.email')}
                     value={form.email}
                     onChange={handleChange}
                 />
                 <InputField
                     type="text"
                     name="subject"
-                    placeholder="Subject"
+                    placeholder={t('contact.subject')}
                     value={form.subject}
                     onChange={handleChange}
                 />
                 <InputField
                     type="textarea"
                     name="message"
-                    placeholder="Message"
+                    placeholder={t('contact.message')}
                     value={form.message}
                     onChange={handleChange}
                 />
                 <button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? t('contact.sending') : t('contact.send')}
                 </button>
             </form>
         </div>
