@@ -23,7 +23,11 @@
     "flagQuiz": {
       "title": "国旗クイズ",
       "description": "Tailwind CSSとReactで構築した国旗クイズアプリです。30か国の国旗を当てるゲームで、ダークモード、正誤音、ローカル保存のスコアランキング機能を備えています。"
-    }
+    },
+    "Reversi Game": {
+    "title": "オセロゲーム",
+    "description": "Next.js 13＋TypeScript＋Tailwind CSS v3 で作った軽量リバーシアプリです。黒石を操作するプレイヤーに対し、白石は合法手からランダムで打つ簡易 CPU が担当。自動パス判定・ゲーム終了・リスタート機能に加え、効果音とガラス調ダーク UI を実装しました。"
+  }
   },
   "contact": {
     "title": "お問い合わせ",

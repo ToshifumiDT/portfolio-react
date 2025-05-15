@@ -27,6 +27,11 @@ const Projects = () => {
             imageUrl: '../image0004.png',
             link: 'https://flag-quiz-orcin.vercel.app/'
         },
+                {
+            key: 'Reversi Game',
+            imageUrl: '../image0005.png',
+            link: 'https://reversi-site.vercel.app/'
+        },
     ];
 
     return (
