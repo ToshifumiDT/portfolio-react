@@ -19,6 +19,13 @@ function App() {
 
   return (
     <HamburgerProvider>
+      <div className="wrapper" aria-hidden="true">
+        <div id="stars" />
+        <div id="stars2" />
+        <div id="stars3" />
+      </div>
+
+      <div className="site-content">
       {/* Language */}
       <div className="flex gap-2 items-center justify-center sm:justify-end px-4 py-2 flex-wrap sm:flex-nowrap">
         <button
@@ -65,7 +72,8 @@ function App() {
         </a>
       </div>
 
-      <ContactForm />
+        <ContactForm />
+      </div>
     </HamburgerProvider>
   );
 }
