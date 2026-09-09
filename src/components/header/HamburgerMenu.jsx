@@ -11,8 +11,12 @@ function HamburgerMenu() {
       <button
         className={`${styles['hamburger-button']} ${isOpen ? styles.active : ''}`} 
         onClick={toggleMenu}
+        type="button"
+        aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-expanded={isOpen}
+        aria-controls="mobile-navigation"
       >
-        <div></div> 
+        <div aria-hidden="true"></div>
       </button>
       {isOpen && (
         <>
@@ -20,7 +24,7 @@ function HamburgerMenu() {
           <div className={styles.overlay} onClick={toggleMenu}></div>
 
         
-          <nav className={styles.nav}>
+          <nav id="mobile-navigation" className={styles.nav} aria-label="Mobile navigation">
             <ul>
               <li><a href="#home" onClick={toggleMenu}>Home</a></li>
               <li><a href="#about" onClick={toggleMenu}>About</a></li>
