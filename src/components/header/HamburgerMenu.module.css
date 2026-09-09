@@ -3,7 +3,7 @@
   right: max(1rem, env(safe-area-inset-right));
   top: max(1rem, env(safe-area-inset-top));
   padding: 0.875rem;
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(229, 231, 235, 0.96);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   z-index: 1002; 
@@ -74,8 +74,9 @@
     max(2rem, env(safe-area-inset-left));
   overflow-y: auto;
   overscroll-behavior: contain;
-  background: rgba(9, 10, 15, 0.96);
-  backdrop-filter: blur(14px);
+  background: rgba(224, 228, 234, 0.91);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(75%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,14 +102,14 @@
   display: block;
   padding: 0.65rem 1rem;
   border-radius: 12px;
-  color: #fff;
+  color: #171a21;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .nav a:hover,
 .nav a:focus-visible {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(23, 26, 33, 0.09);
   transform: translateY(-1px);
   outline: none;
 }
@@ -117,7 +118,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(8, 12, 18, 0.35);
   z-index: 1000; 
 }
 
